@@ -1,0 +1,37 @@
+<% include linkFile1 %>
+<% include userNav %>
+<div class="container mt-0 ">
+  <div class="row">
+    <div class="col sm-12">
+        
+        <form method="POST" action="/user/changeprofile"class="d-flex flex-column justify-content-center align-items-center">
+            <h1 class="mt-5 mb-4 w-50">Update Profile</h1>   
+        <div class="form-group w-50">
+          <% for(row of Getdetails){ %>
+          <% } %>
+          <% for(row of Setdetails){ %>
+          <% } %>
+          <input type="text" class="form-control" placeholder="First Name" name="fname" value="<%= row.fname %>">
+        </div>
+        <div class="form-group w-50">
+            <input type="text" class="form-control" placeholder="Last Name" value="<%= row.lname %>" name="lname" id="exampleInputLast"
+                aria-describedby="LastHelp">
+        </div>
+        <div class="form-group w-50">
+            <input type="text" class="form-control" value="<%= row.email %>" placeholder="Email Id" name="email" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+         </div>
+        <div class="form-group w-50">
+            <input type="text" class="form-control" value="<%= row.mobile %>" placeholder="Mobile No" name ="mobile" id="exampleInputNumber"
+            aria-describedby="NumberHelp">
+       </div>
+         <button class="btn btn-primary w-50 mt-3 pt-2">Update</button>
+     </form>
+     <div class="text-center mt-3" style="color: green; font-size: larger;"><%= msg %></div>
+    </div>
+  </div>
+</div>
+<script src="../javascripts/preloader.js"></script>
+<script src="../javascripts/dropdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Navbar starts -->       
+<header>
+    
+    <div class="container">
+        <div class="row c">
+            <div class="col-md-3 c">
+                <div class="logo">
+                    <img src="../imgs/logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-7 c ">
+                <ul class="menu text-md-center ">
+                    <li><a href="/user">User</a></li>
+                    <li><a href="/user/additem">Add Item</a></li>
+                    <li id="Service" onclick="myfunction()">
+                        <a href="#">Setting</a><span><i id ="icon"class="fa fa-caret-right" style="color: #007bff; transform: rotate(0deg); font-size: 19px; position: relative; top: 2px; left: 7px;" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                        <ul class="sub-service border" id="Sub" style="position: absolute; right: 200px;">
+                            <li class="p-1"><a href="/user/changeprofile">Change Profile</a></li>
+                            <li class="p-1"><a href="/user/changepassword">Change Password</a></li>
+                        </ul>
+                    <li><a href="/login">Log Out</a></li>
+               </ul>
+            </div>
+            <div class="col-md-2" style="position: relative;top: 21px; color: grey; font-weight: bold;"><%= sunm %></div>
+         </div>
+    </div>
+</header>
+<!-- Navbar ends-->       

@@ -1,0 +1,38 @@
+<!-- Navbar starts -->       
+<header>
+    
+    <div class="container">
+        <div class="row c">
+            <div class="col-md-3 c">
+                <div class="logo">
+                  <a href="/customer"><img src="../imgs/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-5 c ">
+                <!-- <ul class="menu text-md-center ">
+                    <li><a href=""></a></li>
+                    <li id="Service" onclick="myfunction()">
+                        <a href="#">Setting</a><span><i id ="icon"class="fa fa-caret-right" style="color: #007bff; transform: rotate(0deg); font-size: 19px; position: relative; top: 2px; left: 7px;" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                        <ul class="sub-service border" id="Sub" style="position: absolute; right: 200px;">
+                            <li class="p-1"><a href="/user/changeprofile">Change Profile</a></li>
+                            <li class="p-1"><a href="/user/changepassword">Change Password</a></li>
+                        </ul>
+                    <li><a href="/login">Log Out</a></li>
+               </ul> -->
+            </div>
+            
+             <div class="col-md-4 text-center pl-0 pr-0 pt-3" style="font-size: 22px;">
+                <span style="font-size: 15px; font-weight: bold; color: rgb(12, 93, 124);" id="cartNum"><%= session.cart ? session.cart.totalqty : '' %></span><a href="/customer/cartPage"><i class="fa fa-shopping-cart mr-4" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-cog mr-4" aria-hidden="true"></i></a>
+                    <a href="/login"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    <a class="ml-3" style=" font-size: 14px; font-weight: bold; display: inline-block;"></a>
+                 </div>
+            
+
+         </div>
+    </div>
+</header>
+
+<!-- Navbar ends-->       

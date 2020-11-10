@@ -1,0 +1,51 @@
+<% include linkFile %>
+<% include adminNav %>
+<div class="container">
+  <div class="row">
+    <h1 class="ml-4 mt-4">View & Manage Users</h1>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Reg Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let row of userDetails) { %>
+          <tr>
+            <td><%= row._id %></td>
+            <td><%= row.fname %></td>
+            <td><%= row.lname %></td>
+            <td><%= row.email %></td>
+            <td><%= row.mobile %></td>
+            <td>
+              <% if(row.status){ %>
+              <a href="/admin/manageuserstatus?s=block&regid=<%= row._id %>" style="color:orangered">Block User</a>
+              <% }else{ %>
+              <a href="/admin/manageuserstatus?s=verify&regid=<%= row._id %>" style="color:green">Verify User</a>
+              <% } %>
+            </td>
+            <td><a href="/admin/manageuserstatus?s=delete&regid=<%= row._id %>" style="color:rgb(161, 11, 11)">Delete
+                User</a></td>
+          </tr>
+          <% }%>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="../javascripts/preloader.js"></script>
+<script src="../javascripts/dropdown.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<% include linkFile %>
+<% include adminNav %>
+<div class="container mt-0 ">
+  <div class="row">
+    <div class="col sm-12">
+    <!-- <h1 class="ml-0 mt-4">Welcome To Add Category Page</h1> -->
+  </div>
+  </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="POST" action="/admin/addsubcategory" enctype="multipart/form-data" class="d-flex flex-column align-items-center justify-content-center" style="height: 400px;">
+                <div class="form-group w-50 mb-3">
+                    <h1 class="pt-5 pb-4 pl-0">Add Sub Category</h1>
+                    <select name="catnm" id="">
+                        <option>Choose Category</option>
+                       <% for(row of clist){ %>
+                        <option><%= row.catnm %></option>  
+                       <% } %>
+                    </select>
+                  </div>
+                <div class="form-group w-50 mb-3">
+                  <input type="text" class="form-control mt-2 mb-2" placeholder="enter sub category name" name="subcatnm">
+                </div>
+                <div class="form-group w-50 mb-3">
+                <input type="file" class="mb-3" name="caticon">
+                </div>
+               <button type="submit" class="btn btn-primary mb-3 w-50 pt-2">Add Sub Category</button>
+              </form>
+       </div>
+      
+    </div>
+    <div class="row"><div class="col-sm-12 text-center" style="color: green; font-size: larger;"><%= msg1 %></div></div>
+
+</div>
+<script src="../javascripts/preloader.js"></script>
+<script src="../javascripts/dropdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+ 
+ <!-- preloader section starts-->
+ <body onload="PreLoader()">
+<% include components/preloader %>
+<!-- preloader section ends -->
+<!-- navbar include -->
+<% include components/nav %>
+
+<div class="container section">
+  <div class="row" id="latest">
+      <div class="col-md-12 head-2">
+          <h1 class="head-b">Latest Product</h1>
+      </div>
+  </div>
+  <div class="row pt-5">
+<div class="col-md-12"><h3>shirt</h3></div>
+<% for(row of show) { %>
+  <% if(row.pcat == 'shirt'){%>
+    <div class="col-md-4 col-sm-6 slide">
+     <div class="service-box">
+      <div class="product"><img src="../fileupload/Product/<%= row.pImage %>" alt="Loading"></div> 
+      
+      </div>
+           <h3 class="head-2"><%= row.pName %></h3>
+           <h6 class="head-2">Price : <%= row.pPrice %> &euro;</h6>
+    </div>
+    <%}%>
+<% } %>
+  </div>
+
+  <div class="row pt-5">
+    <div class="col-md-12"><h3>Watch</h3></div>
+    <% for(row of show) { %>
+      <% if(row.pcat == 'watch'){%>
+        <div class="col-md-4 col-sm-6 slide">
+         <div class="service-box">
+          <div class="product"><img src="../fileupload/Product/<%= row.pImage %>" alt="Loading"></div> 
+          
+          </div>
+               <h3 class="head-2"><%= row.pName %></h3>
+               <h6 class="head-2">Price : <%= row.pPrice %> &euro;</h6>
+        </div>
+        <%}%>
+    <% } %>
+      </div>
+
+</div>
+
+<!-- Latest Product ends -->       
+<!-- Footer include-->
+<% include components/footer %>
+ 
+ <script src="javascripts/dropdown.js"></script>
+ <script src="javascripts/preloader.js"></script>
+  </body>
+</html>

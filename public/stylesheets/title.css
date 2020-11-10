@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.content-b{
+    height: 500px;
+    background: url('../imgs/about_hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.title{
+    font-weight: 700;
+    color: black;
+    font-size: 5.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}

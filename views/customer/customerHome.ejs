@@ -1,0 +1,28 @@
+<% include linkFile2 %>
+<% include customerNav %>
+<div class="container mt-0 ">
+  <div class="row">
+    <div class="col-sm-12">
+    <h1 class="ml-0 mt-4 d-block text-center">Latest Product</h1>
+    
+    </div>
+  </div>
+  <div class="row pt-5">
+    <% for(row of show) { %>
+        <div class="col-md-4 col-sm-6 slide">
+         <div class="service-box">
+          <div class="product"><img src="../fileupload/Product/<%= row.pImage %>" alt="Loading"></div> 
+          <div class="caption"><a style="display: inline-block; padding: 5px 0px; cursor: pointer;" data-time="<%= JSON.stringify(row) %>" class="w-100 Btn">Add Cart</a> </div>
+          </div>
+               <h3 class="head-2"><%= row.pName %></h3>
+               <h6 class="head-2">Price : <%= row.pPrice %></h6>
+        </div>
+    <% } %>
+      </div>
+
+</div>
+<script src="../javascripts/preloader.js"></script>
+<script src="../javascripts/dropdown.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

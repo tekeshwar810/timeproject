@@ -1,0 +1,49 @@
+
+<!-- preloader section starts-->
+
+<body onload="PreLoader()">
+  <% include components/preloader %>
+  <!-- preloader section ends -->
+  <!-- navbar include -->
+  <% include components/nav %>
+
+    <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <form method="POST" action="/login" class="d-flex flex-column align-items-center justify-content-center" style="height: 400px;">
+          <div class="form-group w-50">
+            <h1 class="pt-4 pb-4 pl-0">Sign in</h1>
+            
+            <input type="email" class="form-control" placeholder="Email Id" value="<%= emailid %>" name="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="input-group" style="width: 50%; border-radius: 5px; border: 1px solid rgb(218, 208, 208); " id="show_hide_password">
+            <input class="form-control" placeholder="Password" value="<%= password %>" name="password" style="outline: none; border: none;" type="password">
+            <div class="input-group-addon ">
+              <a><i class="fa fa-eye-slash pl-2 pr-2" style="padding-top: 10px;" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="form-check mt-3 mb-3 w-50">
+            <input type="checkbox" class="form-check-input" value="remember" name="check" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember Me ?</label>
+            <span class="" style="display: inline-block; width: 75%; text-align: end;"><a href="/forgetpassword" style="text-decoration: none;font-size: 13px;">Forget Password ?</a></span>
+          </div>
+          <div class="w-50 mb-2"></div>   
+          <button type="submit" class="btn btn-primary w-50 pt-2">Sign in</button>
+          <div class="link pt-3"><a href="/registration" style="text-decoration: none;">If you have not account Click
+              Here !</a></div>
+         </form>
+        <div class="col-sm-12 text-center mt-3" style="color: green; font-size: larger;"><%= msg %></div>
+      </div>
+    </div>
+  </div>
+
+  <% include components/footer %>
+
+  <script src="javascripts/dropdown.js"></script>
+  <script src="javascripts/preloader.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+URL : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+to start server:
+
+"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath="c:\data\db"
+
+to start client:
+
+"C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe"
+
+for compass url
+mongodb://localhost:27017/employee

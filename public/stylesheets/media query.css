@@ -1,0 +1,166 @@
+@media only screen and (max-width:767px){
+    .menu{
+        display: none;
+    }
+
+#check-1:checked ~ .sub-m{
+    border: 1px solid black;
+    position: relative;
+    left: -15px;
+}
+
+   #check:checked ~ .menu{
+       display: flex;
+       flex-direction: column;
+       margin-top: 20px;
+       
+    }
+    #check-1:checked ~ .sub-m{
+       display: flex;
+       flex-direction: column;
+       padding: 0;
+       margin: 0;
+       position: relative;
+       top: 15px;
+       left: 45px;
+    }  
+    #check:checked ~ .menu li{
+        display: block;
+    }
+    .tag{
+       display: inline-block;
+       position: relative;
+       top: -20px;
+       transition: all 0.3s;
+       
+      }
+      .tag-1{
+        transition: all 0.3s;
+      }
+      .spin ,.spin-1{
+        transition: all 0.3s
+      }
+      #check-1:checked ~.tag-1 .spin-1.f{
+          opacity: 0;
+          transform: rotate(180deg);
+      }
+      #check-1:checked ~.tag-1 .spin-1.s{
+        transform: rotate(180deg);
+    }
+      #check:checked ~ .tag > .spin.m{
+          opacity: 0;
+      }
+      #check:checked ~ .tag > .spin.t{
+        transform: rotate(140deg);
+        margin-bottom: -3px;
+      }
+      #check:checked ~ .tag > .spin.b{
+        transform: rotate(-140deg);
+        margin-top: -8px;
+      }
+      .logo{
+        position: relative;
+        top: 20px;
+      }
+      .logo img{
+          width: 130px;
+      }
+      .blog-head{
+          font-size: 1.8rem;
+      }
+      .blog-pera{
+          font-size: 14px;
+      }
+      .tab-wrap .tab-content{
+          top: 100px;
+      }
+}
+@media only screen and (max-width:1200px){
+    .head{
+        font-size: 4.8rem;
+        margin-top: 80px;
+    }
+    .post-details p a{
+        
+    }
+}
+@media only screen and (max-width:992px){
+    .head{
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .head{
+        font-size: 3.6rem;
+        padding-top: 60px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .watch{
+        display: none;
+    }
+ .head{
+ margin-top: 60px;
+ color: rgb(0, 0, 0);
+}
+.content{
+    background-image: url('imgs/54689800-modern-hand-watch-on-white-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+.blog-t{
+     font-size: 3.5rem;
+     
+ }
+ .bh,.content-b{
+     height: 350px;
+ }
+}
+@media only screen and (max-width:718px){
+     #carouselId .carousel-control-prev .fa-angle-left{
+        top: -50px;
+        left: 0;
+    }
+    #carouselId .carousel-control-next .fa-angle-right{
+        right: 0;
+        top: -50px;
+    }
+}
+@media only screen and (max-width:575px){
+    .footer-c{
+         text-align: center;
+    }
+    .caption{
+        margin: 0px 15px;
+    }
+    .box-1 {
+        width: 70%;
+    }
+    .s-p {margin-left: 1px;}
+     .s-p ,.blog-cat-h{
+     text-align: center;
+     width: 100%;
+    }
+    .post{
+        padding-left: 8px;
+    }
+    .btn{
+        margin-left: 15px;
+    }
+} 
+
+@media only screen and (max-width:467px){
+    .head{
+        font-size: 2.5rem;
+        padding-top: 60px;
+    }
+}
+
+
+
+   
+    
+
